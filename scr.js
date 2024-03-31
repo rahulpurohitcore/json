@@ -5,7 +5,7 @@ const createLargeObject = () => {
   let str = 'a'.repeat(1024 * 500); // 500KB string
 
   // Fill the object with the 500KB string 10 times to create a 5000KB object
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 4; i++) {
     obj[`key${i}`] = str;
   }
 
