@@ -2,9 +2,9 @@ const fs = require('fs');
 
 const createLargeObject = () => {
   let obj = {};
-  let str = 'a'.repeat(1024 * 5); // 5KB string
+  let str = 'a'.repeat(1024 * 500); // 500KB string
 
-  // Fill the object with the 5KB string 10 times to create a 50KB object
+  // Fill the object with the 500KB string 10 times to create a 5000KB object
   for (let i = 0; i < 10; i++) {
     obj[`key${i}`] = str;
   }
@@ -14,7 +14,7 @@ const createLargeObject = () => {
 
 // Create an array of 100 50KB objects to get a 5000KB (or approximately 5MB) JSON
 let largeArray = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
   largeArray.push(createLargeObject());
 }
 
